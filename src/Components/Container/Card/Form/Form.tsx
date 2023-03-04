@@ -1,12 +1,13 @@
 import React from "react";
 import "./Form.css";
 
-const Form = () => {
+const Form: React.FC = () => {
     return (
-        <div className="todo-form">
+        // Convert the code above to a formulary
+        <form className="todo-form">
             <input className="todo-input" type="text" placeholder="New to do item" />
             <button className="todo-button">Add</button>
-        </div>
+        </form>
     )
 };
 

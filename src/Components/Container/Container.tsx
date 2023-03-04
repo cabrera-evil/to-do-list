@@ -2,7 +2,7 @@ import React from "react";
 import "./Container.css";
 import Card from "./Card/Card";
 
-const Main = () => {
+const Container: React.FC = () => {
     return (
         <div className="container">
             <Card />
@@ -10,4 +10,4 @@ const Main = () => {
     )
 };
 
-export default Main;
+export default Container;

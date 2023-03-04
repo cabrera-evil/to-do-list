@@ -4,7 +4,7 @@ import Header from "./Header/Header";
 import Form from "./Form/Form";
 import List from "./List/List";
 
-const Card = () => {
+const Card: React.FC = () => {
     return (
         <div className="card">
             <Header />

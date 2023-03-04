@@ -1,7 +1,7 @@
 import React from "react";
 import "./List.css";
 
-const List = () => {
+const List: React.FC = () => {
     return (
         <div className="list-container">
             
