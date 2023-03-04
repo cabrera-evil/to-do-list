@@ -1,10 +1,9 @@
 import { useState } from 'react'
-import Container from './Components/Container/Container'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+import Container from './Components/Container/Container'
 
+function App() {
   return (
     <div className="App">
       <Container />
