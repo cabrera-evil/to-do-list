@@ -6,9 +6,14 @@ import "react-toastify/dist/ReactToastify.css";
 import Input from "./FormInput/FormInput";
 import Button from "./FormButton/FormButton";
 
+interface Note {
+    text: string;
+    complete: boolean;
+}
+
 const Form: React.FC = () => {
     const [note, setNote] = useState("");
-    const [notes, setNotes] = useState<string[]>(() => {
+    const [notes, setNotes] = useState<Note[]>(() => {
         const storedNotes = localStorage.getItem("notes");
         return storedNotes ? JSON.parse(storedNotes) : [];
     });
@@ -30,7 +35,7 @@ const Form: React.FC = () => {
             return;
         }
         // Add the new note to the array of notes
-        setNotes([...notes, note]);
+        setNotes([...notes, { text: note, complete: false }]);
         // Clear the input
         setNote("");
 
@@ -51,6 +56,12 @@ const Form: React.FC = () => {
     useEffect(() => {
         localStorage.setItem("notes", JSON.stringify(notes));
     }, [notes]);
+
+    const handleComplete = (index: number) => {
+        const newNotes = [...notes];
+        newNotes[index].complete = !newNotes[index].complete;
+        setNotes(newNotes);
+    };
 
     return (
         <>

@@ -1,5 +1,5 @@
 /* Center container div */
-.container {
+.card-container {
     /* Flex */
     display: flex;
     flex-direction: column;

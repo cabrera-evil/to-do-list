@@ -1,7 +1,7 @@
 import React from "react";
-import "./Header.css";
+import "./CardHeader.css";
 
-const Header: React.FC = () => {
+const CardHeader: React.FC = () => {
     return (
         <div className="card-header">
             <h1 className="card-title">What's the plan for today?</h1>
@@ -9,4 +9,4 @@ const Header: React.FC = () => {
     )
 };
 
-export default Header;
+export default CardHeader;
